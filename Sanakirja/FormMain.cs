@@ -29,5 +29,11 @@ namespace Sanakirja
         {
             _ = getSana();
         }
+
+        private void buttonCopy_Click(object sender, EventArgs e)
+        {
+            string fi = labelSana.Text;
+            Clipboard.SetDataObject(fi, true);
+        }
     }
 }

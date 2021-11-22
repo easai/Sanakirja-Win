@@ -33,6 +33,7 @@ namespace Sanakirja
             this.labelSana = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.labelEn = new System.Windows.Forms.Label();
+            this.buttonCopy = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonQuit
@@ -68,7 +69,7 @@ namespace Sanakirja
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(180, 56);
             this.buttonRefresh.TabIndex = 2;
-            this.buttonRefresh.Text = "&Refresh";
+            this.buttonRefresh.Text = "Re&fresh";
             this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
@@ -82,12 +83,25 @@ namespace Sanakirja
             this.labelEn.TabIndex = 3;
             this.labelEn.Text = "-----------";
             // 
+            // buttonCopy
+            // 
+            this.buttonCopy.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCopy.Location = new System.Drawing.Point(12, 261);
+            this.buttonCopy.Name = "buttonCopy";
+            this.buttonCopy.Size = new System.Drawing.Size(84, 37);
+            this.buttonCopy.TabIndex = 4;
+            this.buttonCopy.Text = "&Copy";
+            this.buttonCopy.UseVisualStyleBackColor = false;
+            this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(584, 311);
+            this.Controls.Add(this.buttonCopy);
             this.Controls.Add(this.labelEn);
             this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.labelSana);
@@ -107,6 +121,7 @@ namespace Sanakirja
         private System.Windows.Forms.Label labelSana;
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Label labelEn;
+        private System.Windows.Forms.Button buttonCopy;
     }
 }
 
