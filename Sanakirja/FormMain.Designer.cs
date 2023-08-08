@@ -34,6 +34,8 @@ namespace Sanakirja
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.labelEn = new System.Windows.Forms.Label();
             this.buttonCopy = new System.Windows.Forms.Button();
+            this.buttonPrev = new System.Windows.Forms.Button();
+            this.buttonNext = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonQuit
@@ -53,7 +55,7 @@ namespace Sanakirja
             // 
             this.labelSana.AutoSize = true;
             this.labelSana.Font = new System.Drawing.Font("Meiryo", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSana.Location = new System.Drawing.Point(63, 80);
+            this.labelSana.Location = new System.Drawing.Point(116, 80);
             this.labelSana.Name = "labelSana";
             this.labelSana.Size = new System.Drawing.Size(120, 55);
             this.labelSana.TabIndex = 1;
@@ -77,7 +79,7 @@ namespace Sanakirja
             // 
             this.labelEn.AutoSize = true;
             this.labelEn.Font = new System.Drawing.Font("Meiryo", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEn.Location = new System.Drawing.Point(66, 154);
+            this.labelEn.Location = new System.Drawing.Point(119, 154);
             this.labelEn.Name = "labelEn";
             this.labelEn.Size = new System.Drawing.Size(150, 41);
             this.labelEn.TabIndex = 3;
@@ -95,12 +97,36 @@ namespace Sanakirja
             this.buttonCopy.UseVisualStyleBackColor = false;
             this.buttonCopy.Click += new System.EventHandler(this.buttonCopy_Click);
             // 
+            // buttonPrev
+            // 
+            this.buttonPrev.Font = new System.Drawing.Font("Meiryo", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPrev.Location = new System.Drawing.Point(2, 138);
+            this.buttonPrev.Name = "buttonPrev";
+            this.buttonPrev.Size = new System.Drawing.Size(29, 57);
+            this.buttonPrev.TabIndex = 5;
+            this.buttonPrev.Text = "<";
+            this.buttonPrev.UseVisualStyleBackColor = true;
+            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
+            // 
+            // buttonNext
+            // 
+            this.buttonNext.Font = new System.Drawing.Font("Meiryo", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNext.Location = new System.Drawing.Point(554, 138);
+            this.buttonNext.Name = "buttonNext";
+            this.buttonNext.Size = new System.Drawing.Size(29, 57);
+            this.buttonNext.TabIndex = 6;
+            this.buttonNext.Text = ">";
+            this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(584, 311);
+            this.Controls.Add(this.buttonNext);
+            this.Controls.Add(this.buttonPrev);
             this.Controls.Add(this.buttonCopy);
             this.Controls.Add(this.labelEn);
             this.Controls.Add(this.buttonRefresh);
@@ -122,6 +148,8 @@ namespace Sanakirja
         private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Label labelEn;
         private System.Windows.Forms.Button buttonCopy;
+        private System.Windows.Forms.Button buttonPrev;
+        private System.Windows.Forms.Button buttonNext;
     }
 }
 
