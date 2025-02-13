@@ -9,6 +9,10 @@ namespace Sanakirja
     {
         int index = -1;
         List<Sana> sanaList = new List<Sana>();
+
+        /// <summary>
+        /// Fetches a random word and updates the UI.
+        /// </summary>
         async Task getSana()
         {
             buttonNext.Hide();
@@ -19,19 +23,25 @@ namespace Sanakirja
             sana = await task;
             sanaList.Add(sana);
             labelSana.Text = sana.Fi;
-            //labelEn.Text = sana.En;
             labelEn.Text = index.ToString() + " " + sana.En;
         }
+
+        /// <summary>
+        /// Displays the current word in the UI.
+        /// </summary>
         public void showSana()
         {
             if (0 < sanaList.Count && 0 <= index && index < sanaList.Count)
             {
                 Sana sana = sanaList[index];
                 labelSana.Text = sana.Fi;
-                //labelEn.Text = sana.En;
                 labelEn.Text = index.ToString() + " " + sana.En;
             }
         }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FormMain"/> class.
+        /// </summary>
         public FormMain()
         {
             InitializeComponent();

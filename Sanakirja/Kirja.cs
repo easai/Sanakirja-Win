@@ -23,12 +23,19 @@ namespace Sanakirja
         public string source;
     }
 
-
+    /// <summary>
+    /// Represents a book that fetches random words from an API.
+    /// </summary>
     class Kirja
     {
 
         string url = "http://sanakirja.pythonanywhere.com/api";
 
+        /// <summary>
+        /// Fetches a random word asynchronously.
+        /// </summary>
+        /// <param name="n">The number of random words to fetch.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains a <see cref="Sana"/> object.</returns>
         public async Task<Sana> nrandAsync(int n)
         {
             Answer answer = new Answer();
