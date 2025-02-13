@@ -23,7 +23,8 @@ namespace Sanakirja
             sana = await task;
             sanaList.Add(sana);
             labelSana.Text = sana.Fi;
-            labelEn.Text = index.ToString() + " " + sana.En;
+            labelEn.Text = sana.En;
+            labelNo.Text = index.ToString();
         }
 
         /// <summary>
@@ -35,7 +36,8 @@ namespace Sanakirja
             {
                 Sana sana = sanaList[index];
                 labelSana.Text = sana.Fi;
-                labelEn.Text = index.ToString() + " " + sana.En;
+                labelEn.Text = sana.En;
+                labelNo.Text = index.ToString();
             }
         }
 

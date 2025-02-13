@@ -36,6 +36,7 @@ namespace Sanakirja
             this.buttonCopy = new System.Windows.Forms.Button();
             this.buttonPrev = new System.Windows.Forms.Button();
             this.buttonNext = new System.Windows.Forms.Button();
+            this.labelNo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // buttonQuit
@@ -57,7 +58,7 @@ namespace Sanakirja
             this.labelSana.Font = new System.Drawing.Font("Meiryo", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSana.Location = new System.Drawing.Point(116, 80);
             this.labelSana.Name = "labelSana";
-            this.labelSana.Size = new System.Drawing.Size(120, 55);
+            this.labelSana.Size = new System.Drawing.Size(156, 71);
             this.labelSana.TabIndex = 1;
             this.labelSana.Text = "------";
             // 
@@ -71,7 +72,7 @@ namespace Sanakirja
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(180, 56);
             this.buttonRefresh.TabIndex = 2;
-            this.buttonRefresh.Text = "Re&fresh";
+            this.buttonRefresh.Text = "&Next";
             this.buttonRefresh.UseVisualStyleBackColor = false;
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
@@ -81,7 +82,7 @@ namespace Sanakirja
             this.labelEn.Font = new System.Drawing.Font("Meiryo", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEn.Location = new System.Drawing.Point(119, 154);
             this.labelEn.Name = "labelEn";
-            this.labelEn.Size = new System.Drawing.Size(150, 41);
+            this.labelEn.Size = new System.Drawing.Size(187, 51);
             this.labelEn.TabIndex = 3;
             this.labelEn.Text = "-----------";
             // 
@@ -119,12 +120,23 @@ namespace Sanakirja
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
+            // labelNo
+            // 
+            this.labelNo.AutoSize = true;
+            this.labelNo.Font = new System.Drawing.Font("Meiryo", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNo.Location = new System.Drawing.Point(12, 9);
+            this.labelNo.Name = "labelNo";
+            this.labelNo.Size = new System.Drawing.Size(67, 51);
+            this.labelNo.TabIndex = 7;
+            this.labelNo.Text = "---";
+            // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(584, 311);
+            this.Controls.Add(this.labelNo);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonPrev);
             this.Controls.Add(this.buttonCopy);
@@ -150,6 +162,7 @@ namespace Sanakirja
         private System.Windows.Forms.Button buttonCopy;
         private System.Windows.Forms.Button buttonPrev;
         private System.Windows.Forms.Button buttonNext;
+        private System.Windows.Forms.Label labelNo;
     }
 }
 
